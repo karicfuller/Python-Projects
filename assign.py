@@ -17,8 +17,12 @@ fileList = ('information.docx', 'Hello.txt', 'myImage.png', \
 
 conn = sqlite3.connect('assign.db')
 
-with conn:
-    cur = conn.cursor()
-    for file in fileList:
-        if file.endswith('.txt'):
+
+for file in fileList:
+    if file.endswith('.txt'):
+        with conn:
+            cur = conn.cursor()
+            cur.execute("INSERT INTO tbl_assign (col_file) VALUES (?)",(file,))
             print(file)
+
+conn.close()
