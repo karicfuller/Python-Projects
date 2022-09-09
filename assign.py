@@ -36,4 +36,15 @@ with conn:
 conn.close()
 
 
+conn = sqlite3.connect('assign.db') #connect to db
+
+with conn:
+    cur = conn.cursor()
+    cur.execute("SELECT col_file FROM tbl_assign WHERE col_file = '*txt'")
+    varFile = cur.fetchall()
+    for item in varFile:
+        msg = "File Name: {}".format(item[0])
+        print(msg)
+    
+
     
