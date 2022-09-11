@@ -31,7 +31,7 @@ class A_Truck:
     doors = 2
 
     def truckInfo(self):
-        entry_year = input('Year of your truck: ')
+        entry_make = input('Enter the make of your truck: ')
         entry_doors = input('How many doors does your truck have: ')
         if (entry_year == self.year):
             print('Mine is a 2019 too!')
