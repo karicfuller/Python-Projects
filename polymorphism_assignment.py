@@ -1,4 +1,6 @@
 
+
+
 #parent class
 class Automobile: 
     make = 'Honda'
@@ -19,7 +21,7 @@ class A_Car(Automobile):
 
     def autoInfo(self):
         entry_make = input('Enter the make of your car: ')
-        entry_doors = input('How many doors does your car have: ')
+        entry_doors = input('How many doors does your car have: ') #replaceing model
         if (entry_doors == self.doors):
             print('My car has 4 doors too!')
         else:
@@ -32,7 +34,7 @@ class A_Truck(Automobile):
 
     def autoInfo(self):
         entry_make = input('Enter the make of your truck: ')
-        entry_year = input('What year is your truck: ')
+        entry_year = input('What year is your truck: ') #replacing model with year
         if (entry_year == self.year):
             print('Mine is a 2019 too!')
         else:
