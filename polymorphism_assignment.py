@@ -13,11 +13,11 @@ class Automobile:
             print('That is a cool car!')
         
 #child class A_Car
-class A_Car:
+class A_Car(Automobile):
     cost = 10.00
     doors = 4
 
-    def carInfo(self):
+    def autoInfo(self):
         entry_make = input('Enter the make of your car: ')
         entry_doors = input('How many doors does your car have: ')
         if (entry_doors == self.doors):
@@ -26,13 +26,13 @@ class A_Car:
             print('Oh, my car has 4 doors!')
 
 #child class A_Truck
-class A_Truck:
+class A_Truck(Automobile):
     year = 2019
     doors = 2
 
-    def truckInfo(self):
+    def autoInfo(self):
         entry_make = input('Enter the make of your truck: ')
-        entry_doors = input('How many doors does your truck have: ')
+        entry_year = input('What year is your truck: ')
         if (entry_year == self.year):
             print('Mine is a 2019 too!')
         else:
@@ -44,8 +44,8 @@ auto = Automobile()
 auto.autoInfo()
 
 car = A_Car()
-car.carInfo()
+car.autoInfo()
         
 truck = A_Truck()
-truck.truckInfo()
+truck.autoInfo()
 
