@@ -10,11 +10,10 @@ class Money(ABC):
     def deposit(self,amount):
         pass
 
-class paymentType(Money): 
+class paymentType(Money): #uses info from parent class
     def deposit(self,amount): 
         print('Your allowance in the amount of ${} was deposited to your bank. '.format(amount))
 
-#uses info from both classes
 money = paymentType()
 money.allowance('$50')
 money.deposit('50')
