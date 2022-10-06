@@ -21,17 +21,17 @@
 				<tr id="headerRow">
 					<th>Date</th>
 					<th>Type</th>
-					<th>Description</th>
 					<th>Amount</th>
+					<th>Description</th>
 					<th>Balance</th>
 				</tr>
 				{% for key, total in table_contents.items %}
 				<tr>
-					<td class="center">8/12/19</td>
-					<td class="center">Debit</td>
-					<td class="left">Target</td>
-					<td class="right">$123.45</td>
-					<td class="right">$10,654.78</td>
+					<td class="center">{{ key.date }}</td>
+					<td class="center">{{ key.type }}</td>
+					<td class="left">{{ key.description }}</td>
+					<td class="right">{{ key.amount }}</td>
+					<td class="right">{{ total }}</td>
 				</tr>
 				{% endfor %}
 			</table>
